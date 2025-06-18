@@ -10,7 +10,7 @@ export default function NotFound() {
   const router = useRouter();
 
   useEffect(() => {
-    document.title = "Không tìm thấy trang - Ban Mai Xanh";
+    document.title = "Không tìm thấy trang";
   }, []);
 
   return (

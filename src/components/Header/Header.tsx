@@ -1,74 +1,31 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
-const navItems = [
-  { href: "/", label: "Trang chủ" },
-  { href: "/about", label: "Giới thiệu" },
-  { href: "/products", label: "Sản phẩm" },
-  { href: "/work", label: "Hoạt động" },
-  { href: "/contact", label: "Liên hệ" },
-];
+import Navbar from "../Navbar/Navbar";
+import { siteConfig } from "@/config/siteCofig";
 
 export default function Header() {
-  const pathname = usePathname();
-
   return (
     <>
       <div className="bg-sky-200">
         <div className="flex flex-col sm:flex-row max-w-screen-xl mx-auto justify-between items-center py-2">
           <div className="flex gap-3">
-            <Link href="https://facebook.com" target="_blank">
-              <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center ">
-                <Image
-                  src="/uploads/facebook.png"
-                  alt="facebook"
-                  width={20}
-                  height={20}
-                  className="invert"
-                />
-              </div>
-            </Link>
-
-            <Link href="https://tiktok.com" target="_blank">
-              <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center ">
-                <Image
-                  src="/uploads/tik-tok.png"
-                  alt="tiktok"
-                  width={20}
-                  height={20}
-                  className="invert"
-                />
-              </div>
-            </Link>
-            <Link href="https://youtube.com" target="_blank">
-              <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center">
-                <Image
-                  src="/uploads/youtube.png"
-                  alt="youtube"
-                  width={20}
-                  height={20}
-                  className="invert"
-                />
-              </div>
-            </Link>
-
-            <Link href="https://instagram.com" target="_blank">
-              <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center ">
-                <Image
-                  src="/uploads/instagram.png"
-                  alt="instagram"
-                  width={20}
-                  height={20}
-                  className="invert"
-                />
-              </div>
-            </Link>
+            {siteConfig.socialLinks.map((item) => (
+              <Link key={item.id} href={item.href} target="_blank">
+                <div className="w-8 h-8 rounded-full bg-sky-500 flex items-center justify-center ">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={20}
+                    height={20}
+                    className="invert"
+                  />
+                </div>
+              </Link>
+            ))}
           </div>
 
           <div className="flex gap-2 mt-3 sm:mt-0 items-center">
@@ -107,20 +64,7 @@ export default function Header() {
           </Link>
 
           {/* Menu */}
-          <nav className="hidden lg:flex items-center gap-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "text-gray-800 text-lg font-medium hover:text-sky-600 transition-colors duration-200",
-                  pathname === item.href && "text-sky-600 font-semibold"
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <Navbar />
         </div>
       </div>
     </>

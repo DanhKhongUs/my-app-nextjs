@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/siteCofig";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -46,62 +47,20 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-2">LIÊN KẾT NHANH</h3>
             <div className="space-y-4 flex flex-col mt-4">
-              <Link
-                href="/"
-                className="hover:translate-x-4 transition-all duration-300 cursor-pointer"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  size="sm"
-                  className="mr-2"
-                />
-                Trang chủ
-              </Link>
-              <Link
-                href="/about"
-                className="hover:translate-x-4 transition-all duration-300 cursor-pointer"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  size="sm"
-                  className="mr-2"
-                />{" "}
-                Giới thiệu
-              </Link>
-
-              <Link
-                href="/products"
-                className="hover:translate-x-4 transition-all duration-300 cursor-pointer"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  size="sm"
-                  className="mr-2"
-                />{" "}
-                Sản phẩm
-              </Link>
-              <Link
-                href="/work"
-                className="hover:translate-x-4 transition-all duration-300 cursor-pointer"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  size="sm"
-                  className="mr-2"
-                />{" "}
-                Hoạt động
-              </Link>
-              <Link
-                href="/contact"
-                className="hover:translate-x-4 transition-all duration-300 cursor-pointer"
-              >
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  size="sm"
-                  className="mr-2"
-                />{" "}
-                Liên hệ
-              </Link>
+              {siteConfig.navLinks.map((item) => (
+                <Link
+                  key={item.id}
+                  href={item.href}
+                  className="hover:translate-x-4 transition-all duration-300 cursor-pointer"
+                >
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    size="sm"
+                    className="mr-2"
+                  />{" "}
+                  {item.title}
+                </Link>
+              ))}
             </div>
           </div>
 
