@@ -30,7 +30,7 @@ export default function Banner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => prev + 1);
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [current]);
 
