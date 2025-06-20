@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="bg-black text-white px-6 pt-12 pb-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto flex justify-between gap-8">
           <div>
             <Image
               src="/logo/footer.jpg"
@@ -30,7 +30,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Thông tin liên hệ */}
           <div>
             <h3 className="text-lg font-bold mb-2">THÔNG TIN LIÊN HỆ</h3>
             <div className="italic flex flex-col">
@@ -43,7 +42,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Liên kết nhanh */}
           <div>
             <h3 className="text-lg font-bold mb-2">LIÊN KẾT NHANH</h3>
             <div className="space-y-4 flex flex-col mt-4">
@@ -63,29 +61,11 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Đăng ký nhận tin */}
-          <div>
-            <h3 className="text-lg font-bold mb-2">ĐĂNG KÝ NHẬN TIN</h3>
-            <form className="flex items-center bg-white rounded-full overflow-hidden shadow-md">
-              <input
-                type="email"
-                placeholder="Đăng ký nhận tin"
-                className="flex-1 px-4 py-2 text-black focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-green-600 hover:bg-green-700 text-white font-bold px-4 py-2 rounded-full"
-              >
-                ĐĂNG KÝ
-              </button>
-            </form>
-          </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 text-center text-sm border-t border-white/10 pt-4">
-          © 2025 trungtambanmaixanh.com – Thiết kế bởi sikido.vn
+          © 2025 trungtambonamhai.com – Thiết kế bởi thanhdanhpy.vn
         </div>
       </div>
     </footer>

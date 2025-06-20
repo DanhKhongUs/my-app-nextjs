@@ -16,8 +16,8 @@ export const siteConfig: SiteConfig = {
   navLinks: [
     { id: 0, href: "/", title: "Trang chủ" },
     { id: 1, href: "/about", title: "Giới thiệu" },
-    { id: 2, href: "/products", title: "Sản phẩm" },
-    { id: 3, href: "/work", title: "Hoạt động" },
+    { id: 3, href: "/modal", title: "Mô hình" },
+    { id: 2, href: "/blogs", title: "Bài viết" },
     { id: 4, href: "/contact", title: "Liên hệ" },
   ],
 

@@ -6,6 +6,9 @@ import InterventionModels from "@/components/InterventionModels";
 import { ReasonsItem } from "@/data/reasons";
 import Image from "next/image";
 import DisplayScroll from "@/components/DisplayScroll";
+import LatestBlogsDetail from "@/components/LatestBlogsDetail";
+import Contact from "@/components/Contact/Contact";
+
 export default function Home() {
   return (
     <div>
@@ -131,6 +134,14 @@ export default function Home() {
 
       <DisplayScroll>
         <CustomerFeedback />
+      </DisplayScroll>
+
+      <DisplayScroll>
+        <LatestBlogsDetail />
+      </DisplayScroll>
+
+      <DisplayScroll>
+        <Contact />
       </DisplayScroll>
     </div>
   );

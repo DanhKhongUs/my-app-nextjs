@@ -6,8 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "../Navbar/Navbar";
 import { siteConfig } from "@/config/siteCofig";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
+
+  const handleNextPage = () => {
+    router.push("/admin/login");
+  };
+
   return (
     <>
       <div className="bg-sky-200">
@@ -64,7 +71,16 @@ export default function Header() {
           </Link>
 
           {/* Menu */}
-          <Navbar />
+          <div className="flex gap-4">
+            <Navbar />
+
+            <button
+              onClick={handleNextPage}
+              className="cursor-pointer ml-2 bg-gray-900 text-white py-2 px-4 rounded hover:bg-gray-800 hover:shadow-lg transition duration-300"
+            >
+              LOGIN
+            </button>
+          </div>
         </div>
       </div>
     </>
