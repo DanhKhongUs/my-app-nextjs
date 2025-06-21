@@ -12,7 +12,7 @@ interface AppBoardProps {
   blogs: IBlog[];
 }
 
-const AppBoard = ({ blogs: initialBlogs }: AppBoardProps) => {
+export default function AppBoard({ blogs: initialBlogs }: AppBoardProps) {
   const [blogs, setBlogs] = useState<IBlog[]>(initialBlogs);
   const [blog, setBlog] = useState<IBlog | null>(null);
   const [showModalCreate, setShowModalCreate] = useState(false);
@@ -57,7 +57,8 @@ const AppBoard = ({ blogs: initialBlogs }: AppBoardProps) => {
               <th className="px-4 py-3 border-b">#</th>
               <th className="px-4 py-3 border-b">Tiêu đề</th>
               <th className="px-4 py-3 border-b">Tác giả</th>
-              <th className="px-4 py-3 border-b text-center">Thao tác</th>
+              <th className="px-4 py-3 border-b">Thao tác</th>
+              <th className="px-4 py-3 border-b">Ngày tạo</th>
             </tr>
           </thead>
           <tbody>
@@ -99,6 +100,13 @@ const AppBoard = ({ blogs: initialBlogs }: AppBoardProps) => {
                       Xoá
                     </button>
                   </td>
+                  <td className="px-4 py-2 text-sm text-gray-600">
+                    {new Date(item.createAt).toLocaleDateString("vi-VN", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })}
+                  </td>
                 </tr>
               ))
             )}
@@ -121,6 +129,4 @@ const AppBoard = ({ blogs: initialBlogs }: AppBoardProps) => {
       />
     </div>
   );
-};
-
-export default AppBoard;
+}

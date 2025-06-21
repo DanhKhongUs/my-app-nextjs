@@ -4,4 +4,5 @@ export interface IBlog {
   author: string;
   title: string;
   image?: string;
+  createAt: string;
 }

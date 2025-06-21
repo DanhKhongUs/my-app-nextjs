@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// Dữ liệu đánh giá
 const testimonials = [
   {
     id: 1,
@@ -45,16 +44,29 @@ const testimonials = [
   },
 ];
 
-const cardPerView = 2;
-const extendedSlides = [
-  ...testimonials.slice(-cardPerView),
-  ...testimonials,
-  ...testimonials.slice(0, cardPerView),
-];
-
 export default function CustomerFeedback() {
   const [current, setCurrent] = useState(1);
   const [noTransition, setNoTransition] = useState(false);
+  const [cardPerView, setCardPerView] = useState(2);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setCardPerView(1);
+      } else {
+        setCardPerView(2);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const extendedSlides = [
+    ...testimonials.slice(-cardPerView),
+    ...testimonials,
+    ...testimonials.slice(0, cardPerView),
+  ];
 
   const prev = () => setCurrent((prev) => prev - 1);
   const next = () => setCurrent((prev) => prev + 1);
@@ -80,7 +92,7 @@ export default function CustomerFeedback() {
     wrapper?.addEventListener("transitionend", handleTransitionEnd);
     return () =>
       wrapper?.removeEventListener("transitionend", handleTransitionEnd);
-  }, [current]);
+  }, [current, cardPerView]);
 
   useEffect(() => {
     if (noTransition) {

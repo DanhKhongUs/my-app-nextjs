@@ -24,7 +24,9 @@ export default function GalleryLightbox({
 
   return (
     <>
-      <div className={`grid grid-cols-2 ${columnMap[columns]} gap-4`}>
+      <div
+        className={`grid grid-cols-1 sm:grid-cols-2 gap-4 ${columnMap[columns]}`}
+      >
         {images.map((img, i) => (
           <div
             key={i}
@@ -35,7 +37,8 @@ export default function GalleryLightbox({
               src={img}
               alt={`Image ${i + 1}`}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+              className="object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-90"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
           </div>

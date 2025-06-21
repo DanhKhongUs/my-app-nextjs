@@ -49,6 +49,7 @@ export default function CreateModal({
       author,
       content,
       image,
+      createAt: new Date().toISOString(),
     };
 
     const updated = [...blogs, newBlog];

@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-white">
-      <div className="bg-black text-white px-6 pt-12 pb-6">
-        <div className="max-w-7xl mx-auto flex justify-between gap-8">
+      <div className="bg-black text-white px-12 pt-12 pb-6">
+        <div className="max-w-7xl mx-auto flex justify-between flex-col md:flex-row gap-8">
           <div>
             <Image
               src="/logo/footer.jpg"
@@ -62,11 +62,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Copyright */}
-        <div className="mt-12 text-center text-sm border-t border-white/10 pt-4">
-          © 2025 trungtambonamhai.com – Thiết kế bởi thanhdanhpy.vn
-        </div>
+      </div>
+      <div className="text-center text-white text-sm border-t border-white/10 bg-[#282828] p-2">
+        © 2025 trungtambonamhai.com – Thiết kế bởi thanhdanhpy.vn
       </div>
     </footer>
   );

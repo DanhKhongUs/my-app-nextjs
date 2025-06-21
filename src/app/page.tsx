@@ -46,12 +46,13 @@ export default function Home() {
       </DisplayScroll>
 
       <DisplayScroll>
-        <div className="relative w-full h-[824px] mt-12">
+        <div className="relative w-full  aspect-[16/9] mt-12">
           <Image
             src="/uploads/ban-bia.jpg"
             alt="ban-bida"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 1200px"
             priority
           />
         </div>
