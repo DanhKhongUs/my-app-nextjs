@@ -7,7 +7,7 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden lg:flex items-center gap-x-8">
+    <nav className="hidden md:flex items-center gap-x-8">
       {siteConfig.navLinks.map((item) => (
         <Link
           key={item.id}

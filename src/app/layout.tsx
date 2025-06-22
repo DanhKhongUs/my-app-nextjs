@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
 import ContactCircleBtnWrap from "@/components/ContactCircleBtn/ContactCircleBtnWrap";
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function RootLayout({
   children,
@@ -15,7 +16,9 @@ export default function RootLayout({
     <html lang="vi" suppressHydrationWarning>
       <body>
         <Header />
-        <Providers>{children}</Providers>
+        <Providers>
+          <AuthProvider>{children}</AuthProvider>
+        </Providers>
         <ContactCircleBtnWrap />
         <Footer />
 
