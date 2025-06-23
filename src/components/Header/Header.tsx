@@ -36,7 +36,7 @@ export default function Header() {
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
     setCurrentUser(null);
-    router.refresh(); // hoặc window.location.reload();
+    router.refresh();
   };
 
   const handleNextPage = () => {
@@ -46,7 +46,7 @@ export default function Header() {
   return (
     <>
       {/* Top bar */}
-      <div className="bg-sky-200 text-sm">
+      <div className="bg-sky-200">
         <div className="flex flex-col sm:flex-row max-w-screen-xl mx-auto justify-between items-center py-2 px-4 gap-2 sm:gap-0">
           <div className="flex gap-3">
             {siteConfig.socialLinks.map((item) => (

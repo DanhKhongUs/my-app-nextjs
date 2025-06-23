@@ -157,7 +157,7 @@ export default function CustomerFeedback() {
                     </div>
                     <div>
                       <p className="font-bold">{item.name}</p>
-                      <p className="text-sm text-gray-500">{item.role}</p>
+                      <p className=" text-gray-500">{item.role}</p>
                     </div>
                   </div>
                 </div>

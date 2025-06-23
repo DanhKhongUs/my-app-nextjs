@@ -17,7 +17,7 @@ export default function Footer() {
               height={0}
               className="mb-4"
             />
-            <p className="text-sm leading-6">
+            <p className=" leading-6">
               “Nơi chạm vào yêu thương
               <br />
               Nơi chạm vào trí tuệ
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center text-white text-sm border-t border-white/10 bg-[#282828] p-2">
+      <div className="text-center text-white  border-t border-white/10 bg-[#282828] p-2">
         © 2025 trungtambonamhai.com – Thiết kế bởi thanhdanhpy.vn
       </div>
     </footer>

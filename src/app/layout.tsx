@@ -1,6 +1,5 @@
 import "./globals.css";
 import "@/lib/fontawesome";
-import { Providers } from "./providers";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { ToastContainer } from "react-toastify";
@@ -16,9 +15,7 @@ export default function RootLayout({
     <html lang="vi" suppressHydrationWarning>
       <body>
         <Header />
-        <Providers>
-          <AuthProvider>{children}</AuthProvider>
-        </Providers>
+        <AuthProvider>{children}</AuthProvider>
         <ContactCircleBtnWrap />
         <Footer />
 

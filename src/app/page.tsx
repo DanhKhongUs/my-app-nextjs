@@ -8,6 +8,7 @@ import Image from "next/image";
 import DisplayScroll from "@/components/DisplayScroll";
 import LatestBlogsDetail from "@/components/LatestBlogsDetail";
 import Contact from "@/components/Contact/Contact";
+import CurriculumDetail from "@/components/CurriculumDetail";
 
 export default function Home() {
   return (
@@ -58,25 +59,7 @@ export default function Home() {
         </div>
       </DisplayScroll>
       <DisplayScroll>
-        <section className="pt-16 px-4 max-w-screen-xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-            CHƯƠNG TRÌNH GIÁO DỤC
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="rounded-lg p-6 shadow-md bg-black h-[150px] text-white">
-              <div className="text-lg font-semibold mb-2">01</div>
-              <h3 className="text-xl font-bold">GIÁO DỤC BIDA TỪ SỚM</h3>
-            </div>
-            <div className="rounded-lg p-6 shadow-md bg-green-200 text-black h-[150px]">
-              <div className="text-lg font-semibold mb-2">02</div>
-              <h3 className="text-xl font-bold">TẬP LUYỆN NHỮNG CÚ NHẢY BI</h3>
-            </div>
-            <div className="rounded-lg p-6 shadow-md bg-green-200 text-black h-[150px]">
-              <div className="text-lg font-semibold mb-2">03</div>
-              <h3 className="text-xl font-bold">ĐIỀU TIẾT TÂM LÝ TRÊN BÀN</h3>
-            </div>
-          </div>
-        </section>
+        <CurriculumDetail />
       </DisplayScroll>
 
       <DisplayScroll>

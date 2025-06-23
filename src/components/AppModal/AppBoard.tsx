@@ -77,30 +77,32 @@ export default function AppBoard({ blogs: initialBlogs }: AppBoardProps) {
                   <td className="px-4 py-2">{index + 1}</td>
                   <td className="px-4 py-2">{item.title}</td>
                   <td className="px-4 py-2">{item.author}</td>
-                  <td className="px-4 py-2 text-center space-x-2">
-                    <Link
-                      href={`/blogs/${item.id}`}
-                      className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded shadow transition"
-                    >
-                      Xem
-                    </Link>
-                    <button
-                      onClick={() => {
-                        setBlog(item);
-                        setShowModalUpdate(true);
-                      }}
-                      className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded shadow transition cursor-pointer"
-                    >
-                      Sửa
-                    </button>
-                    <button
-                      onClick={() => handleDeleteBlog(item.id)}
-                      className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded shadow transition cursor-pointer"
-                    >
-                      Xoá
-                    </button>
+                  <td className="px-4 py-2 text-center space-y-1 sm:space-x-2 sm:space-y-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-center gap-1">
+                      <Link
+                        href={`/blogs/${item.id}`}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded shadow transition"
+                      >
+                        Xem
+                      </Link>
+                      <button
+                        onClick={() => {
+                          setBlog(item);
+                          setShowModalUpdate(true);
+                        }}
+                        className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded shadow transition"
+                      >
+                        Sửa
+                      </button>
+                      <button
+                        onClick={() => handleDeleteBlog(item.id)}
+                        className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded shadow transition"
+                      >
+                        Xoá
+                      </button>
+                    </div>
                   </td>
-                  <td className="px-4 py-2 text-sm text-gray-600">
+                  <td className="px-4 py-2 text-gray-600">
                     {new Date(item.createAt).toLocaleDateString("vi-VN", {
                       day: "2-digit",
                       month: "2-digit",

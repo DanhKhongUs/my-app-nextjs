@@ -41,11 +41,11 @@ function InterventionModels() {
             />
             <div className="absolute inset-0 bg-green-700/60 group-hover:bg-green-700/80 transition duration-300 text-white p-5 flex flex-col justify-end">
               <h3 className="text-lg font-bold mb-1">CÁ NHÂN</h3>
-              <p className="text-sm mb-2 line-clamp-3">
+              <p className=" mb-2 line-clamp-3">
                 Can thiệp cá nhân được coi như một “mô hình y tế” để “huấn
                 luyện” trẻ về trạng thái bình thường...
               </p>
-              <span className="font-semibold underline text-sm ">XEM THÊM</span>
+              <span className="font-semibold underline  ">XEM THÊM</span>
             </div>
           </div>
 
@@ -58,11 +58,11 @@ function InterventionModels() {
             />
             <div className="absolute inset-0 bg-green-700/60 group-hover:bg-green-700/80 transition duration-300 text-white p-5 flex flex-col justify-end">
               <h3 className="text-lg font-bold mb-1">NHÓM</h3>
-              <p className="text-sm mb-2 line-clamp-3">
+              <p className=" mb-2 line-clamp-3">
                 Can thiệp nhóm sẽ phát huy được tính tích cực, trách nhiệm và
                 năng lực hợp tác làm việc...
               </p>
-              <span className="font-semibold underline text-sm ">XEM THÊM</span>
+              <span className="font-semibold underline  ">XEM THÊM</span>
             </div>
           </div>
         </div>

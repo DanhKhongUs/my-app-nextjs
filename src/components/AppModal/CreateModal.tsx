@@ -75,24 +75,24 @@ export default function CreateModal({
         <h2 className="text-xl font-bold mb-4">Thêm bài viết mới</h2>
 
         <div className="space-y-4">
-          <Input
+          <input
             type="text"
             placeholder="Tiêu đề"
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded outline-none"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <Input
+          <input
             type="text"
             placeholder="Tác giả"
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded outline-none"
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
           <textarea
             placeholder="Nội dung"
             rows={4}
-            className="w-full border p-2 rounded"
+            className="w-full border p-2 rounded outline-none"
             value={content}
             onChange={(e) => setContent(e.target.value)}
           />
@@ -102,7 +102,7 @@ export default function CreateModal({
               type="file"
               accept="image/*"
               onChange={handleFileChange}
-              className="w-full"
+              className="w-full cursor-pointer"
             />
             {image && (
               <div className="relative w-full h-48 mt-2 rounded overflow-hidden">

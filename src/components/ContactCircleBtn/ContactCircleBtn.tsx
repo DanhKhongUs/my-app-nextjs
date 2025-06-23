@@ -55,7 +55,7 @@ const ContactCircleBtn = () => {
       </a>
       <a
         href="sms:0123456789"
-        className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow hover:scale-115 transition-transform font-bold text-white text-sm"
+        className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center shadow hover:scale-115 transition-transform font-bold text-white"
       >
         SMS
       </a>

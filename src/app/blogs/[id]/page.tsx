@@ -41,10 +41,10 @@ export default function ViewDetailBlog() {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto mt-8 p-4 bg-white shadow rounded-lg grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-10">
-      <div>
+    <div className="max-w-screen-xl mx-auto mt-8  bg-white shadow rounded-lg grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-10">
+      <div className="p-4">
         <div className="mb-4">
-          <Link href="/blogs" className="text-blue-600 hover:underline">
+          <Link href="/blogs" className="text-gray-600 hover:underline">
             ← Quay lại danh sách
           </Link>
         </div>
@@ -62,10 +62,12 @@ export default function ViewDetailBlog() {
           <p className="text-gray-500">Tác giả: {blog.author}</p>
         </div>
 
-        <div className="text-gray-800 py-4">{blog.content}</div>
+        <div className="text-gray-700 whitespace-pre-line my-4">
+          {blog.content}
+        </div>
 
         {blog.image && (
-          <div className="relative w-full h-150 mt-2 rounded overflow-hidden">
+          <div className="relative w-full aspect-video mt-4 rounded overflow-hidden">
             <Image
               src={blog.image}
               alt="Preview"
