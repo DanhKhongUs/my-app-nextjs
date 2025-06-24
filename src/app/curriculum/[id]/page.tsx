@@ -3,11 +3,11 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import NewsSidebar from "@/components/NewsSidebar";
 
-export default function CurriculumDetailPage({
-  params,
-}: {
+interface CurriculumProps {
   params: { id: string };
-}) {
+}
+
+export default function CurriculumDetailPage({ params }: CurriculumProps) {
   const item = CurriculumItem.find((i) => i.id === Number(params.id));
   if (!item) return notFound();
 
