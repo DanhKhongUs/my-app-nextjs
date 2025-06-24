@@ -1,10 +1,14 @@
+"use client";
+
 import ModalsDetail from "@/components/ModalsDetail";
+import SectionHero from "@/components/SectionHero";
+
 function ModalPage() {
   return (
     <div>
-      <h1 className="text-2xl font-bold text-center mt-10 text-gray-900">
-        CHƯƠNG TRÌNH GIÁO DỤC
-      </h1>
+      <div>
+        <SectionHero title="MÔ HÌNH HỌC TẬP" />
+      </div>
       <ModalsDetail />
     </div>
   );

@@ -17,14 +17,16 @@ function CurriculumDetail() {
           <div
             key={item.id}
             onClick={() => router.push(`/curriculum/${item.id}`)}
-            className={`cursor-pointer rounded-lg p-6 shadow-md h-[150px] transition-all duration-200 hover:scale-105 hover:shadow-lg ${
+            className={`cursor-pointer rounded-lg p-6 pb-10 shadow-md h-[172px] transition-all flex items-center duration-200 hover:scale-105 hover:shadow-lg ${
               index === 0 ? "bg-black text-white" : "bg-green-200 text-black"
             }`}
           >
-            <div className="text-lg font-semibold mb-2">
-              {String(index + 1).padStart(2, "0")}
+            <div>
+              <div className="text-lg font-semibold mb-2">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+              <h3 className="text-xl font-bold ">{item.title}</h3>
             </div>
-            <h3 className="text-xl font-bold">{item.title}</h3>
           </div>
         ))}
       </div>

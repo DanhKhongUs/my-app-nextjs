@@ -47,7 +47,7 @@ export default function Header() {
     <>
       {/* Top bar */}
       <div className="bg-sky-200">
-        <div className="flex flex-col sm:flex-row max-w-screen-xl mx-auto justify-between items-center py-2 px-4 gap-2 sm:gap-0">
+        <div className="hidden md:flex max-w-screen-xl mx-auto justify-between items-center py-2 px-4 gap-2 ">
           <div className="flex gap-3">
             {siteConfig.socialLinks.map((item) => (
               <Link key={item.id} href={item.href} target="_blank">

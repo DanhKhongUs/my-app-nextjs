@@ -37,7 +37,7 @@ export default function AppBoard({ blogs: initialBlogs }: AppBoardProps) {
   };
 
   return (
-    <div className="px-12 py-6 bg-gray-50">
+    <div className="px-12 py-6">
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-4 ">
         <h3 className="text-2xl font-bold text-gray-800">
           📚 Danh sách bài viết

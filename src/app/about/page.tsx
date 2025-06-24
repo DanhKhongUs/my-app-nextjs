@@ -1,3 +1,4 @@
+import SectionHero from "@/components/SectionHero";
 import Image from "next/image";
 
 const slides = [
@@ -21,22 +22,28 @@ const slides = [
 
 export default function AboutPage() {
   return (
-    <div className="px-4 py-10">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className="max-w-screen-xl mx-auto mb-10 relative aspect-[16/9] rounded-lg overflow-hidden"
-        >
-          <Image
-            src={`/uploads/slidesAbout/${slide}`}
-            alt={`slide ${index + 1}`}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 1200px"
-            priority={index === 0}
-          />
-        </div>
-      ))}
+    <div>
+      <div>
+        <SectionHero title="GIỚI THIỆU" />
+      </div>
+
+      <div className="px-4 py-10">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="max-w-screen-xl mx-auto mb-10 relative aspect-[16/9] rounded-lg overflow-hidden"
+          >
+            <Image
+              src={`/uploads/slidesAbout/${slide}`}
+              alt={`slide ${index + 1}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
+              priority={index === 0}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
